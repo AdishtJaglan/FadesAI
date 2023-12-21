@@ -2,11 +2,14 @@ import openai
 import requests
 from PIL import Image
 from io import BytesIO
+from openai import OpenAI
 
-openai.api_key = 'my_api_key'
+api_key = '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'
+client=OpenAI(api_key=api_key)
+
 
 def get_response(prompt):
-    response = openai.Completion.create(
+    response = client.completions.create(
       engine="text-davinci-003",
       prompt=prompt,
       temperature=0.5,
@@ -15,7 +18,7 @@ def get_response(prompt):
     return response.choices[0].text.strip()
 
 def generate_image(text):
-    response = openai.Image.create(
+    response = client.completions.create(
         prompt=text,
         n=4,
         size="256x256"
@@ -28,7 +31,7 @@ def generate_image(text):
         image = Image.open(BytesIO(image_data))
         image.save(f"generated_image_{i}.png")
         image.show()
-    print("Images saved")
+    print("Images saved")  
 
 # Main chat loop
 while True:
