@@ -1,1 +1,1 @@
-# This is a small project by me. It is a fashion design website with frontend and backend code. It has a python chatbot integrated into which takes a prompt and returns an img. This project is a work in progress and will recieve frequent updates by me. 
+<p> This is a small project by me. It is a fashion design website with frontend and backend code. It has a python chatbot integrated into which takes a prompt and returns an img. This project is a work in progress and will recieve frequent updates by me.</p> 
