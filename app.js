@@ -38,6 +38,10 @@ app.get("/register", function (req, res) {
   res.render("register");
 });
 
+app.get("/account", isLoggedIn, function (req, res) {
+  res.render("account", { username: req.user.username });
+});
+
 app.post("/register", async (req, res) => {
   const user = await User.create({
     username: req.body.username,
