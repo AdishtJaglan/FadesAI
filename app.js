@@ -27,7 +27,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.get("/", function (req, res) {
-  res.render("home");
+  res.render("login");
 });
 
 app.get("/secret", isLoggedIn, function (req, res) {
