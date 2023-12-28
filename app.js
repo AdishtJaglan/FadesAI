@@ -2,7 +2,7 @@ const express = require("express"),
   mongoose = require("mongoose"),
   passport = require("passport"),
   bodyParser = require("body-parser"),
-  axios = require("axios"), 
+  axios = require("axios"),
   LocalStrategy = require("passport-local"),
   passportLocalMongoose =
     require("passport-local-mongoose")
@@ -86,7 +86,8 @@ function isLoggedIn(req, res, next) {
 }
 
 app.use(express.static(__dirname + '/views'));
-app.use(express.static(__dirname + '/styles')); 
+app.use(express.static(__dirname + '/styles'));
+app.use(express.static(__dirname + '/scripts'));
 
 app.get("/chatbot", function (req, res) {
   res.render("chatBot");
@@ -98,7 +99,7 @@ app.post('/chatbot', async (req, res) => {
 
     // TODO: Send 'userMessage' to the Python chatbot for processing using Axios
     const chatbotResponse = await axios.post('http://localhost:3000/chatbot', { message: userMessage });
-    
+
     // Assuming the chatbotResponse contains the text response from the chatbot
     const chatbotTextResponse = chatbotResponse.data.response;
 
