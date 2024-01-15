@@ -1,90 +1,68 @@
 body {
-    font-family: 'Arial', sans-serif;
+    background-image: url(img2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
+    background-color: #e60073;
+    border-bottom: 3px solid #ff80b3;
+}
+
+.navbar-brand {
     color: white;
-    padding: 10px;
-    width: 100%;
+    font-weight: bold;
 }
 
-.navbar .left {
-    margin-left: 5%; 
-}
-
-.navbar .right {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%; 
-}
-
-.navbar a,
-.navbar h1 {
+.navbar-brand:hover {
     color: white;
-    text-decoration: none;
-    margin: 0 20px; 
-    font-weight: bold; 
-    font-size: 18px; 
 }
 
-.main-content {
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffccff;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.welcome-section {
     text-align: center;
-    padding: 50px;
-    margin-top: 50px; 
-}
-
-.button-get-started {
-    padding: 10px 30px;
-    background-color: #007bff;
+    margin-top: 50px;
     color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.button-get-started:hover {
-    background-color: #0056b3;
+.welcome-section h2 {
+    color: #310c5b;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.fades-heading {
-    margin: 0;
-    font-size: 28px; 
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    color: #ffcc00; 
-    font-family: 'Roboto', sans-serif;
-}
-
-h1.funky-font {
-    font-family: 'Roboto', sans-serif;
-    font-size: 36px; 
-    margin-bottom: 10px;
-}
-
-h3 {
+.welcome-section p {
     font-size: 1.2rem;
-    font-weight: normal; 
-    color: #666; 
-    margin-bottom: 30px; 
+    color: #000000;
+    margin-bottom: 30px;
 }
-.main-content {
-    text-align: center;
-    padding: 50px;
-    margin-top: 50px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.btn-create {
+    background-color: #ff3399;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-create:hover {
+    background-color: #ff0066;
+    color: white;
+}
+
+footer {
+    display: none;
 }

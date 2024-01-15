@@ -11,6 +11,12 @@ let app = express();
 
 mongoose.connect("mongodb://localhost/27017");
 
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection failed"));
+db.once("open", () => {
+  console.log("Database conneceted");
+});
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("express-session")({
